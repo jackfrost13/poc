@@ -24,14 +24,40 @@ class _FcmScreenState extends State<FcmScreen> {
 
   _FcmScreenState(this.firebaseUser);
 
+  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+  @override
+  void initState() {
+    super.initState();
+    _firebaseMessaging.configure(
+      onMessage: (Map<String, dynamic> message) async {
+        print("onMessage: $message");
+      },
+      onLaunch: (Map<String, dynamic> message) async {
+        print("onLaunch: $message");
+      },
+      onResume: (Map<String, dynamic> message) async {
+        print("onResume: $message");
+      },
+    );
+    _firebaseMessaging.requestNotificationPermissions(
+        const IosNotificationSettings(sound: true, badge: true, alert: true));
+    _firebaseMessaging.onIosSettingsRegistered
+        .listen((IosNotificationSettings settings) {
+      print("Settings registered: $settings");
+    });
+    _firebaseMessaging.getToken().then((String token) {
+      assert(token != null);
+      setState(() {
+        _homeScreenText = "Push Messaging token: $token";
+      });
+      print("token is === $_homeScreenText");
+    });
+  }
+  String _homeScreenText = "Waiting for token...";
+
+
   @override
   Widget build(BuildContext context) {
-    FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
-    String token;
-    _firebaseMessaging.getToken().then((String t) {
-      token = t;
-    });
-    print("token = $token");
     return Scaffold(
       appBar: AppBar(
         title: Text('FcmScreen'),
@@ -49,6 +75,10 @@ class _FcmScreenState extends State<FcmScreen> {
       body: Container(
         child: Column(
           children: <Widget>[
+            Text(_homeScreenText),
+            Divider(
+              height: 20.0,
+            ),
             showChat(context),
             Divider(
               height: 20.0,
