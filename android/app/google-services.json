@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "930137650806",
+    "firebase_url": "https://hardy-album-226704.firebaseio.com",
+    "project_id": "hardy-album-226704",
+    "storage_bucket": "hardy-album-226704.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930137650806:android:21c51b84c35254a2",
+        "android_client_info": {
+          "package_name": "com.coderelic.poc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "930137650806-3g8i0r5ri9u3d8f6heftvb3ni06fivot.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coderelic.poc",
+            "certificate_hash": "14e2276f0be3904edfac7bccb86ad692b1995f1b"
+          }
+        },
+        {
+          "client_id": "930137650806-j5kaiie0fkg4rkl7s3f7tg07s4ajm278.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRqUmFJPiO34bY-cRDMilalDAWPEAsl3k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "930137650806-j5kaiie0fkg4rkl7s3f7tg07s4ajm278.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
