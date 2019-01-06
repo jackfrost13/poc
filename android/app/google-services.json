@@ -23,6 +23,22 @@
           }
         },
         {
+          "client_id": "930137650806-neb6phi26urovh1qhna284omb4mjbkpt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coderelic.poc",
+            "certificate_hash": "d229ef665de3839722bbaa46dd86019115619bab"
+          }
+        },
+        {
+          "client_id": "930137650806-3tnrc3nflt9dniviprtsv8l2nk8t7jdn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coderelic.poc",
+            "certificate_hash": "a69d9c69b1df05673dd52b7c93fe64744b3ebaa0"
+          }
+        },
+        {
           "client_id": "930137650806-j5kaiie0fkg4rkl7s3f7tg07s4ajm278.apps.googleusercontent.com",
           "client_type": 3
         }
