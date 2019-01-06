@@ -81,67 +81,6 @@ Future<Null> waiting() async {
   await Future.delayed(Duration(seconds: 3));
 }
 
-//import 'package:flutter/material.dart';
-//import 'package:firebase_messaging/firebase_messaging.dart';
-//import 'dart:async';
-//
-//void main() {
-//  runApp(MaterialApp(home :FcmApp()));
-//}
-//
-//class FcmApp extends StatefulWidget {
-//  @override
-//  FcmAppState createState() {
-//    return new FcmAppState();
-//  }
-//}
-//
-//class FcmAppState extends State<FcmApp> {
-//  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
-//  @override
-//  void initState() {
-//    super.initState();
-//    _firebaseMessaging.configure(
-//      onMessage: (Map<String, dynamic> message) async {
-//        print("onMessage: $message");
-//      },
-//      onLaunch: (Map<String, dynamic> message) async {
-//        print("onLaunch: $message");
-//      },
-//      onResume: (Map<String, dynamic> message) async {
-//        print("onResume: $message");
-//      },
-//    );
-//    _firebaseMessaging.requestNotificationPermissions(
-//        const IosNotificationSettings(sound: true, badge: true, alert: true));
-//    _firebaseMessaging.onIosSettingsRegistered
-//        .listen((IosNotificationSettings settings) {
-//      print("Settings registered: $settings");
-//    });
-//    _firebaseMessaging.getToken().then((String token) {
-//      assert(token != null);
-//      print("token = $token");
-//    });
-//  }
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//        appBar: AppBar(
-//          title: Text('FcmApp'),
-//        ),
-//        body: buildpage(),
-//      );
-//  }
-//
-//  Widget buildpage() {
-//    String token;
-//    _firebaseMessaging.getToken().then((String val){token=val;});
-//    return Container(
-//      child: Text('done'),
-//    );
-//  }
-//}
 
 // // Copyright 2017 The Flutter Authors. All rights reserved.
 // // Use of this source code is governed by a BSD-style license that can be
@@ -279,37 +218,7 @@ Future<Null> waiting() async {
 //     }
 //   }
 
-//   @override
-//   void initState() {
-//     super.initState();
-//     _firebaseMessaging.configure(
-//       onMessage: (Map<String, dynamic> message) async {
-//         print("onMessage: $message");
-//         _showItemDialog(message);
-//       },
-//       onLaunch: (Map<String, dynamic> message) async {
-//         print("onLaunch: $message");
-//         _navigateToItemDetail(message);
-//       },
-//       onResume: (Map<String, dynamic> message) async {
-//         print("onResume: $message");
-//         _navigateToItemDetail(message);
-//       },
-//     );
-//     _firebaseMessaging.requestNotificationPermissions(
-//         const IosNotificationSettings(sound: true, badge: true, alert: true));
-//     _firebaseMessaging.onIosSettingsRegistered
-//         .listen((IosNotificationSettings settings) {
-//       print("Settings registered: $settings");
-//     });
-//     _firebaseMessaging.getToken().then((String token) {
-//       assert(token != null);
-//       setState(() {
-//         _homeScreenText = "Push Messaging token: $token";
-//       });
-//       print("token is === $_homeScreenText");
-//     });
-//   }
+
 
 //   @override
 //   Widget build(BuildContext context) {
