@@ -30,9 +30,11 @@ class _FcmAppState extends State<FcmApp> {
     );
     firebaseMessaging.getToken().then((token) {
       if (token != null) {
-        Firestore.instance.collection('tokens').document().setData({
-          "tokenID": token,
-        });
+        Firestore.instance.document('tokens/$token').setData(
+          {
+            "tokenID": token,
+          },
+        );
       }
       print("token2=" + token);
     });
